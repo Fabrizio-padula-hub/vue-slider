@@ -26,6 +26,7 @@
 
 // Partendo dal markup fornito nello starter pack, rifare lo slider ma questa volta usando Vue.
 // partiamo facendo scorrere le img con le freccie su e giu
+    // collegare l'indice alle frecce
 // collegare le img del thumbs con l'img principale
 
 const { createApp } = Vue;
@@ -63,7 +64,12 @@ createApp({
            activeImage: 0,
         };
         
-    }
+    },
+    methods: {
+        showNextImage: function(){
+            this.activeImage++;
+        }
+    },
 }).mount('#app');
 
 
